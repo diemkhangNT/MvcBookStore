@@ -37,5 +37,32 @@ namespace MvcBookStore.Controllers
             var dsSachMoi = LaySachMoi(6);
             return View(dsSachMoi);
         }
+
+        public ActionResult SPTheoChuDe(int id)
+        {
+            //Lấy các sách theo mã chủ đề được chọn
+            var dsSachtheoChuDe = db.SACHes.Where(sach => sach.MaCD == id).ToList();
+
+            //Trả về View để render các sách trên
+            //Tái sử dụng view index ở trên, truyền vào danh sách)
+            return View("Index", dsSachtheoChuDe);
+        }
+
+        public ActionResult SPTheoNXB(int id)
+        {
+            //Lấy các sách theo mã chủ đề được chọn
+            var dsSachtheoNXB = db.SACHes.Where(sach => sach.MaNXB == id).ToList();
+
+            //Trả về View để render các sách trên
+            //Tái sử dụng view index ở trên, truyền vào danh sách)
+            return View("Index", dsSachtheoNXB);
+        }
+
+        public ActionResult Details(int id)
+        {
+            //lấy sách có mã tương ứng:
+            var sach = db.SACHes.FirstOrDefault(s => s.MaSach == id);
+            return View(sach);
+        }
     }
 }
