@@ -34,32 +34,7 @@
         </nav>
         <br />
         <div>
-            <div class="row">
-                <div class="col-md-3">
-                    @Html.Action("LayChuDe", "BookStore")
-                    @*<div class="title">CHỦ ĐỀ SÁCH</div>
-                        <ul class="list-group">
-                            <li class="list-group-item">First category</li>
-                            <li class="list-group-item">Second category</li>
-                            <li class="list-group-item">Third category</li>
-                        </ul>*@
-                    @Html.Action("LayNXB", "BookStore")
-                    @*<div class="title">NHÀ XUẤT BẢN</div>
-                    <ul class="list-group">
-                        <li class="list-group-item">First category</li>
-                        <li class="list-group-item">Second category</li>
-                        <li class="list-group-item">Third category</li>
-                    </ul>*@
-                </div>
-                <div class="col-md-9">
-                    <img style="width:100%;" src="~/Images/banner.jpg" />
-                    <div style="color:red; text-align:center; margin:15px 0;">
-                        SÁCH MỚI
-                    </div>
-                    @RenderBody()
-                    <br />
-                </div>
-            </div>
+            @RenderBody()
         </div>
     </div>
     @Scripts.Render("~/bundles/jquery")
