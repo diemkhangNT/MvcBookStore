@@ -131,6 +131,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BookStoreController.cs" />
+    <Compile Include="Controllers\GioHangController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NguoiDungController.cs" />
     <Compile Include="Global.asax.cs">
@@ -148,6 +149,7 @@
     <Compile Include="Models\KHACHHANG.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\MatHangMua.cs" />
     <Compile Include="Models\Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -196,6 +198,7 @@
     <Content Include="Images\Book01.jpg" />
     <Content Include="Images\Book02.jpg" />
     <Content Include="Images\Book03.jpg" />
+    <Content Include="Images\Giohang.gif" />
     <Content Include="Images\Gt_Thcb.jpg" />
     <Content Include="Images\Humpback Whale.jpg" />
     <Content Include="Images\Kt.jpg" />
@@ -379,6 +382,8 @@
     <Content Include="Views\NguoiDung\DangKy.cshtml" />
     <Content Include="Views\NguoiDung\DangNhap.cshtml" />
     <Content Include="Views\Shared\_Layout_Login.cshtml" />
+    <Content Include="Views\GioHang\HienThiGioHang.cshtml" />
+    <Content Include="Views\GioHang\GioHangPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
