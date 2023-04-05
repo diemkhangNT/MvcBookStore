@@ -22,8 +22,8 @@ namespace MvcBookStore.Models
     
         public int MaTG { get; set; }
         public string TenTG { get; set; }
-        public string DiaChiTG { get; set; }
-        public string DienThoaiTG { get; set; }
+        public string DiachiTG { get; set; }
+        public string DienthoaiTG { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<VIETSACH> VIETSACHes { get; set; }

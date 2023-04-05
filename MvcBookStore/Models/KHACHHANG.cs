@@ -21,15 +21,15 @@ namespace MvcBookStore.Models
         }
     
         public int MaKH { get; set; }
-        public string HoTenKH { get; set; }
-        public string DiaChiKH { get; set; }
-        public string DienThoaiKH { get; set; }
+        public string HotenKH { get; set; }
+        public string DiachiKH { get; set; }
+        public string DienthoaiKH { get; set; }
         public string TenDN { get; set; }
         public string Matkhau { get; set; }
-        public Nullable<System.DateTime> NgaySinh { get; set; }
-        public Nullable<bool> GioiTinh { get; set; }
-        public Nullable<bool> DaDuyet { get; set; }
+        public Nullable<System.DateTime> Ngaysinh { get; set; }
+        public Nullable<bool> Gioitinh { get; set; }
         public string Email { get; set; }
+        public Nullable<bool> Daduyet { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DONDATHANG> DONDATHANGs { get; set; }

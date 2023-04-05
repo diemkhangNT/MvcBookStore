@@ -21,17 +21,17 @@ namespace MvcBookStore.Models
             this.VIETSACHes = new HashSet<VIETSACH>();
         }
     
-        public int MaSach { get; set; }
-        public string TenSach { get; set; }
-        public string DonViTinh { get; set; }
-        public Nullable<decimal> DonGia { get; set; }
-        public string MoTa { get; set; }
-        public string HinhMinhHoa { get; set; }
+        public int Masach { get; set; }
+        public string Tensach { get; set; }
+        public string DonVitinh { get; set; }
+        public Nullable<decimal> Dongia { get; set; }
+        public string Mota { get; set; }
+        public string Hinhminhhoa { get; set; }
         public Nullable<int> MaCD { get; set; }
         public Nullable<int> MaNXB { get; set; }
-        public Nullable<System.DateTime> NgayCapNhat { get; set; }
-        public Nullable<int> SoluongBan { get; set; }
-        public Nullable<int> SolanXem { get; set; }
+        public Nullable<System.DateTime> Ngaycapnhat { get; set; }
+        public Nullable<int> Soluongban { get; set; }
+        public Nullable<int> Solanxem { get; set; }
     
         public virtual CHUDE CHUDE { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

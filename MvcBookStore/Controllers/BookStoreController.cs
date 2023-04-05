@@ -15,7 +15,7 @@ namespace MvcBookStore.Controllers
         {
             //Sắp xếp sách theo ngày cập nhật giảm dần, lấy dúng số lượng sách cần 
             //Chuyển qua dạng danh sách kết quả đạt được
-            return db.SACHes.OrderByDescending(sach => sach.NgayCapNhat).Take(soluong).ToList();
+            return db.SACHes.OrderByDescending(sach => sach.Ngaycapnhat).Take(soluong).ToList();
         }
 
 
@@ -61,7 +61,7 @@ namespace MvcBookStore.Controllers
         public ActionResult Details(int id)
         {
             //lấy sách có mã tương ứng:
-            var sach = db.SACHes.FirstOrDefault(s => s.MaSach == id);
+            var sach = db.SACHes.FirstOrDefault(s => s.Masach == id);
             return View(sach);
         }
     }

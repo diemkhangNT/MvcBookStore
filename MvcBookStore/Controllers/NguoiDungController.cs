@@ -28,7 +28,7 @@ namespace MvcBookStore.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (string.IsNullOrEmpty(kh.HoTenKH)){
+                if (string.IsNullOrEmpty(kh.HotenKH)){
                     ModelState.AddModelError(string.Empty, "Họ tên không được để trống!");
                 }
                 if (string.IsNullOrEmpty(kh.TenDN))
@@ -43,7 +43,7 @@ namespace MvcBookStore.Controllers
                 {
                     ModelState.AddModelError(string.Empty, "Email không được để trống!");
                 }
-                if (string.IsNullOrEmpty(kh.DienThoaiKH))
+                if (string.IsNullOrEmpty(kh.DienthoaiKH))
                 {
                     ModelState.AddModelError(string.Empty, "Điện thoại không được để trống!");
                 }

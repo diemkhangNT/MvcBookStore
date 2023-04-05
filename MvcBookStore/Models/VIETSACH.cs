@@ -15,8 +15,8 @@ namespace MvcBookStore.Models
     public partial class VIETSACH
     {
         public int MaTG { get; set; }
-        public int MaSach { get; set; }
-        public string VaiTro { get; set; }
+        public int MaSaCH { get; set; }
+        public string Vaitro { get; set; }
     
         public virtual SACH SACH { get; set; }
         public virtual TACGIA TACGIA { get; set; }

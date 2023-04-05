@@ -21,16 +21,16 @@ namespace MvcBookStore.Models
         }
     
         public int SoDH { get; set; }
-        public Nullable<int> MaKH { get; set; }
+        public Nullable<int> MaKh { get; set; }
         public Nullable<System.DateTime> NgayDH { get; set; }
         public Nullable<decimal> Trigia { get; set; }
-        public Nullable<bool> DaGiao { get; set; }
-        public Nullable<System.DateTime> NgayGiaoHang { get; set; }
-        public string TenNguoiNhan { get; set; }
-        public string DiaChiNhan { get; set; }
-        public string DienThoaiNhan { get; set; }
-        public Nullable<bool> HTThanhToan { get; set; }
-        public Nullable<bool> HTGiaoHang { get; set; }
+        public Nullable<bool> Dagiao { get; set; }
+        public Nullable<System.DateTime> Ngaygiaohang { get; set; }
+        public string Tennguoinhan { get; set; }
+        public string Diachinhan { get; set; }
+        public string Dienthoainhan { get; set; }
+        public Nullable<bool> HTThanhtoan { get; set; }
+        public Nullable<bool> HTGiaohang { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CTDATHANG> CTDATHANGs { get; set; }

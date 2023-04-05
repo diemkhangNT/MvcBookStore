@@ -14,11 +14,11 @@ namespace MvcBookStore.Models
     
     public partial class CTDATHANG
     {
-        public int SODH { get; set; }
+        public int SoDH { get; set; }
         public int MaSach { get; set; }
         public Nullable<int> Soluong { get; set; }
-        public Nullable<decimal> DonGia { get; set; }
-        public Nullable<decimal> ThanhTien { get; set; }
+        public Nullable<decimal> Dongia { get; set; }
+        public Nullable<decimal> Thanhtoan { get; set; }
     
         public virtual DONDATHANG DONDATHANG { get; set; }
         public virtual SACH SACH { get; set; }

@@ -9,6 +9,7 @@ namespace MvcBookStore.Controllers
 {
     public class GioHangController : Controller
     {
+        QLBANSACHEntities db = new QLBANSACHEntities();
          public List<MatHangMua> LayGioHang()
         {
             List<MatHangMua> giohang = Session["GioHang"] as List<MatHangMua>;
@@ -115,6 +116,63 @@ namespace MvcBookStore.Controllers
              }
             return RedirectToAction("HienThiGioHang");
             
+        }
+
+        public ActionResult DatHang()
+        {
+            if(Session["TaiKhoan"] == null)
+            {
+                return RedirectToAction("DangNhap", "NguoiDung");
+            }
+            List<MatHangMua> giohang = LayGioHang();
+            if (giohang == null || giohang.Count == 0)
+            {
+                return RedirectToAction("Index", "BookStore");
+            }
+            ViewBag.TongSL = TinhTongSL();
+            ViewBag.TongTien = TinhTongTien();
+            return View(giohang);
+        }
+
+        public ActionResult DongYDatHang()
+        {
+            KHACHHANG khach = Session["TaiKhoan"] as KHACHHANG;
+            List<MatHangMua> giohang = LayGioHang();
+
+            DONDATHANG donHang = new DONDATHANG();
+            donHang.MaKh = khach.MaKH;
+            donHang.NgayDH = DateTime.Now;
+            donHang.Trigia = (decimal)TinhTongTien();
+            donHang.Dagiao = false;
+            donHang.Tennguoinhan = khach.HotenKH;
+            donHang.Diachinhan = khach.DiachiKH;
+            donHang.Dienthoainhan = khach.DienthoaiKH;
+            donHang.HTGiaohang = false;
+            donHang.HTThanhtoan = false;
+
+            db.DONDATHANGs.Add(donHang);
+            db.SaveChanges();
+
+            //Them chi tiet gio hang
+            foreach(var sanpham in giohang)
+            {
+                CTDATHANG cTDATHANG = new CTDATHANG();
+                cTDATHANG.SoDH = donHang.SoDH;
+                cTDATHANG.MaSach = sanpham.MaSach;
+                cTDATHANG.Soluong = sanpham.SoLuong;
+                cTDATHANG.Dongia = (decimal)sanpham.DonGia;
+                db.CTDATHANGs.Add(cTDATHANG);
+                db.SaveChanges();
+            }
+
+            //Xoa gio hang
+            Session["GioHang"] = null;
+            return RedirectToAction("HoanThanhDonHang");
+        }
+
+        public ActionResult HoanThanhDonHang()
+        {
+            return View();
         }
     }
 }

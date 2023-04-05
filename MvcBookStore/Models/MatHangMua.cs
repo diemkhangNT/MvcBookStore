@@ -22,10 +22,10 @@ namespace MvcBookStore.Models
         {
             this.MaSach = MaSach;
             //Tìm sách trong csdl có mã id cần và gán cho mặt hàng được mua
-            var sach = db.SACHes.Single(s => s.MaSach == this.MaSach);
-            this.TenSach = sach.TenSach;
-            this.AnhBia = sach.HinhMinhHoa;
-            this.DonGia = double.Parse(sach.DonGia.ToString());
+            var sach = db.SACHes.Single(s => s.Masach == this.MaSach);
+            this.TenSach = sach.Tensach;
+            this.AnhBia = sach.Hinhminhhoa;
+            this.DonGia = double.Parse(sach.Dongia.ToString());
             this.SoLuong = 1; 
         }
 
