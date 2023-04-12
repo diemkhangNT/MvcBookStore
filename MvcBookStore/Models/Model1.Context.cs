@@ -33,5 +33,6 @@ namespace MvcBookStore.Models
         public virtual DbSet<SACH> SACHes { get; set; }
         public virtual DbSet<TACGIA> TACGIAs { get; set; }
         public virtual DbSet<VIETSACH> VIETSACHes { get; set; }
+        public virtual DbSet<ADMIN> ADMINs { get; set; }
     }
 }
