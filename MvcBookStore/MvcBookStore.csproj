@@ -141,7 +141,6 @@
     <Compile Include="Controllers\GioHangController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NguoiDungController.cs" />
-    <Compile Include="Controllers\SACHesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -406,11 +405,8 @@
     <Content Include="Views\Admin\Sach.cshtml" />
     <Content Include="Views\Admin\ThemSach.cshtml" />
     <Content Include="Views\Admin\ChiTietSach.cshtml" />
-    <Content Include="Views\SACHes\Create.cshtml" />
     <Content Include="Views\Admin\XoaSach.cshtml" />
-    <Content Include="Views\SACHes\Details.cshtml" />
     <Content Include="Views\Admin\SuaSach.cshtml" />
-    <Content Include="Views\SACHes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
